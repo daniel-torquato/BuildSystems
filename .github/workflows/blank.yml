@@ -10,8 +10,4 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Meson
-      run: cd Meson; meson build
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+      run: meson build; cd build; ninja
